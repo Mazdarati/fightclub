@@ -1,0 +1,42 @@
+*
+  @include mAll(0)
+  @include pAll(0)
+html
+  height: 100%
+header, nav, section, article, aside, footer
+  display: block
+body
+  font: 12px/18px "FuturaPTBook"
+  width: 100%
+  height: 100%
+  @include bgColorHex(#e7e7e5)
+.bg_contacts_type_1
+  @include bgColorHex(#e7e7e5)
+.bg_contacts_type_2
+  @include bgColorHex(#0d0d0e)
+.bg_contacts_type_3
+  @include bgColorHex(#fff)
+a
+  color: #696969
+  outline: none
+  @include tD(none)
+a:hover
+  @include tD(underline)
+p
+  @include mAllBy3(0,0,18px)
+img
+  @include bNone()
+input
+  @include vA(middle)
+ul
+  list-style: none
+.wrapper
+  @include mAuto()
+  @include hW(auto,1000px)
+  min-height: 100%
+.wrapper_index
+  @include mAuto()
+  @include hW(621px,1000px)
+  min-height: 100%
+.clear
+  clear: both

@@ -1,0 +1,308 @@
+#row_program_title
+  @include bgColorHex(#e7e7e5)
+  .fc_program_columns
+    font-size: 40px
+    line-height: 42px
+    @include pAllBy3(45px,0,90px)
+    span
+      font-weight: bold
+#row_content
+  @include mTop(-36px)
+  @include mBottom(80px)
+  .fc_program_schedule
+    @include hW(auto,100%)
+    thead
+      @include fBoldS(14px)
+      color: #0d0d0e
+      tr
+        td
+          @include pBottom(20px)
+    tbody
+      color: #a09f9f
+      font-size: 14px
+      tr
+        @include mBottom(40px)
+        td
+          word-wrap: break-word
+          @include pAllBy2(20px,0)
+      .table_time
+        color: #0d0d0e
+        @include fBoldS(14px)
+        @include pRight(20px)
+#row_programs
+  @include bgColorHex(#fff)
+  @include pAllBy4(30px,0,85px,0)
+  #row_program_list
+    ul
+      &:after, &:before
+        clear: both
+        display: table
+        content: " "
+    li
+      float: left
+      @include hW(auto,auto)
+      @include mAllBy2(0,14px)
+      &:first-child
+        @include mLeft(0px)
+      &:last-child
+        @include mRight(0px)
+      a
+        text-decoration: none
+      .butt_program_t
+        @include bgColorHex(#040405)
+        @include hW(72px,229px)
+        position: relative
+        &:after, &:before
+          clear: both
+          display: table
+          content: " "
+        .butt_program_title
+          float: left
+          color: #ffffff
+          font-size: 18px
+          @include tT(uppercase)
+          @include pAllBy4(27px,0,27px,28px)
+        .butt_program_icon_1,.butt_program_icon_2,.butt_program_icon_3,.butt_program_icon_4
+          float: right
+        .butt_program_icon_1
+          @include bgUrl('../../images/icons/icon_program.png')
+          @include hW(46px,46px)
+          @include mAllBy2(13px,10px)
+        .butt_program_icon_2
+          @include bgUrl('../../images/icons/icon_program_2.png')
+          @include hW(37px,24px)
+          @include mAllBy2(18px,12px)
+        .butt_program_icon_3
+          @include bgUrl('../../images/icons/icon_program_3.png')
+          @include hW(37px,29px)
+          @include mAllBy2(18px,12px)
+        .butt_program_icon_4
+          @include bgUrl('../../images/icons/icon_program_4.png')
+          @include hW(38px,34px)
+          @include mAllBy2(17px,10px)
+  .slogan_program
+    color: #040405
+    @include fRegularS(30px)
+    line-height: 28px
+    @include mTop(85px)
+    @include tA(center)
+#row_abonements
+  @include bgColorHex(#e7e7e5)
+  .section_abonements
+    @include hWInh()
+    @include pAllBy2(50px,0)
+    #ab_descr
+      @include mBottom(40px)
+      .club_carts
+        @include fBoldS(30px)
+        line-height: 30px
+    #ab_list
+      @include mBottom(50px)
+      .divided_row_cards
+        @include hWInh()
+        &:after, &:before
+          content: " "
+          clear: both
+          display: table
+        .divided_col_cards
+          float: left
+          @include hW(auto,33%)
+          .col
+            @include pAllBy4(21px,18px,21px,26px)
+            @include mAllBy2(7px,5px)
+        .type1, .type2, .type3
+          .col
+            @include bgColorHex(#ffffff)
+            .col_title
+              text-transform: uppercase
+              @include fBoldS(24px)
+              color: #0d0d0e
+              @include mAllBy2(15px, 0)
+            .col_descr
+              font-size: 14px
+              color: #0d0d0e
+            .col_info
+              @include mTop(40px)
+              &:after, &:before
+                content: " "
+                clear: both
+                display: table
+              .col_amout
+                float: left
+                @include mTop(12px)
+                @include fRegularS(29px)
+                @include tA(left)
+                color: #0d0d0e
+                line-height: 12px
+                span
+                  font-size: 14px
+              .col_button
+                float: right
+                @include pAllBy2(16px, 20px)
+                @include tA(right)
+                @include bgColorHex(#c91e39)
+                color: #ffffff
+                font-size: 14px
+                text-transform: uppercase
+                cursor: pointer
+                position: relative
+                .button_pl_br
+                  @include hW(4px,25%)
+                  position: absolute
+                  bottom: 0
+                  right: 0
+                  @include bgColorHex(#9b172c)
+        .type2
+          .col
+            @include bgColorHex(#0d0d0e)
+            .col_title
+              color: #ffffff
+            .col_descr
+              color: #ffffff
+            .col_info
+              .col_amout
+                color: #ffffff
+        .type3
+          .col
+            background: #ff0028 url("../../images/abonements_pr.png") no-repeat
+            background-position-y: bottom
+            background-position-x: right
+            background-size: cover
+            .col_title
+              color: #ffffff
+            .col_title_pr
+              font-size: 17px
+              color: #ffffff
+            .col_info
+              .col_percent
+                float: left
+                @include fRegularS(55px)
+                @include tA(left)
+                @include mTop(16px)
+                color: #ffffff
+              .col_button
+                @include bgColorHex(#ffffff)
+                color: #0d0d0e
+        .untype
+          .col
+            @include pAllBy4(21px,0,21px,16px)
+            .info_card
+              @include fRegularS(14px)
+              text-align: left
+              color: #0d0d0e
+              word-break: normal
+              @include mTop(115px)
+#row_benefict
+  @include bgColorHex(#0d0d0e)
+  @include hW(650px, auto)
+  position: relative
+  .row_benefict_img
+    position: absolute
+    top: 0
+    left: 0
+  .row_bernefict_text
+    float: right
+    @include hW(inherit,500px)
+    position: relative
+    z-index: 12
+    .block_text_contacts
+      @include mTop(45px)
+      z-index: 12
+      .title_t1
+        color: #ffffff
+        font-style: italic
+        font-family: FuturaPTHeavy
+        @include mBottom(36px)
+        h1
+          font-size: 44px
+          line-height: 40px
+      .text_t1
+        color: #ffffff
+        font-size: 15px
+        line-height: 15px
+        font-family: FuturaPTBook
+        @include display(block)
+        word-wrap: break-word
+        z-index: 12
+        > div
+          @include mAllBy2(30px, 0)
+          &:after, &:before
+            clear: both
+            display: table
+            content: " "
+        .ul_li
+          float: left
+          color: #c91e39
+          font-style: italic
+          font-size: 24px
+          line-height: 24px
+          @include mRight(21px)
+        .li
+          float: left
+          width: 445px
+          @include mTop(4px)
+      .benefict_button
+        float: left
+        @include mTop(10px)
+        @include pAllBy2(16px, 20px)
+        @include tA(right)
+        @include bgColorHex(#c91e39)
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        cursor: pointer
+        position: relative
+        z-index: 7
+        &:after, &:before
+          clear: both
+        .h_r_button_br
+          @include hW(4px,25%)
+          position: absolute
+          bottom: 0
+          right: 0
+          @include bgColorHex(#9b172c)
+          z-index: 8
+#row_contacts
+  @include bgColorHex(#0d0d0e)
+  .divided_row
+    @include hWInh()
+    &:after, &:before
+      content: " "
+      display: table
+      clear: both
+    > div
+      float: left
+      @include hW(inherit, 50%)
+    .row_site_contacts
+      .block_text_contacts
+        @include mTop(175px)
+        .social_net
+          @include mTop(55px)
+          @include tA(left)
+          &:after, &:before
+            content: " "
+            display: table
+            clear: both
+          nav
+            li
+              display: inline-block
+              position: relative
+              @include mRight(20px)
+              a
+                color: #385a9a
+                @include fRegularS(14px)
+        .title_t1
+          color: #ffffff
+          font-family: FuturaPTHeavy
+          @include mBottom(45px)
+          h1
+            font-size: 44px
+            line-height: 40px
+        .text_t1
+          color: #ffffff
+          font-size: 14px
+          font-family: FuturaPTBook
+          @include display(block)
+          @include tA(justify)
+    .row_google_widget
+      float: right

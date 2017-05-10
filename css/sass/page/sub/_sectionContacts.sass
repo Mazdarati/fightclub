@@ -1,0 +1,22 @@
+.section_contacts
+  .text_contacts
+    @include hW(inherit, 40%)
+    @include mTop(120px)
+    .social_net
+      @include mTop(55px)
+      @include tA(left)
+      &:after, &:before
+        content: " "
+        clear: both
+      nav
+        li
+          display: inline-block
+          position: relative
+          @include mRight(20px)
+          a
+            color: #385a9a
+            @include fRegularS(14px)
+  .google_widget
+    float: right
+    @include mBottom(20px)
+    @include hW(auto,60%)

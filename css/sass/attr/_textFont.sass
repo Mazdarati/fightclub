@@ -1,0 +1,32 @@
+@mixin fBold()
+  font-weight: 700
+@mixin fRegular()
+  font-weight: 400
+@mixin fBoldS($size,$style: normal,$stretch: normal)
+  font-size: $size
+  font-weight: 700
+  font-style: $style
+  font-stretch: $stretch
+@mixin fRegularS($size,$style: normal,$stretch: normal)
+  font-size: $size
+  font-weight: 400
+  font-style: $style
+  font-stretch: $stretch
+@mixin lS($value: normal)
+  letter-spacing: $value
+@mixin quotes($value)
+  quotes: $value
+@mixin tA($value)
+  text-align: $value
+@mixin vA($value)
+  vertical-align: $value
+@mixin tI($value)
+  text-indent: $value
+@mixin tO($value)
+  text-overflow: $value
+@mixin tD($value)
+  text-decoration: $value
+@mixin tT($value)
+  text-transform: $value
+@mixin wS($value)
+  white-space: $value

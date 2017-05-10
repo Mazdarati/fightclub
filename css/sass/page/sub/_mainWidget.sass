@@ -1,0 +1,26 @@
+.divided_row
+  @include hWInh()
+  @include pAllBy2(50px,0)
+  &:after, &:before
+    content: " "
+    clear: both
+    display: table
+  > .row
+    float: left
+    @include hW(inherit, 50%)
+    .title_t1
+      font-family: FuturaPTHeavy
+      @include mAllBy2(45px,0)
+    .text_t1
+      font-size: 14px
+      font-family: FuturaPTBook
+      @include display(block)
+      @include tA(justify)
+    .mail
+      font-size: 14px
+      font-family: FuturaPTBook
+      @include display(block)
+      @include tA(justify)
+    h1
+      font-size: 44px
+      line-height: 40px

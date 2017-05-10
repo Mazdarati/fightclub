@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <title>fightclub.kz</title>
+    <meta name="keywords" content="compete" />
+    <meta name="description" content="" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/sass/font.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/sass/common.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/jquery.modal.min.css" type="text/css" media="screen, projection" />
+    <!-- Script -->
+    <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function setMapWidth() {
+                googleWidthSize = window.innerWidth/2;
+                if ($("#site_wrap").height() > $(window).height()) {
+                    googleWidthSize = googleWidthSize-9;
+                }
+                $("iframe").width(googleWidthSize);
+            }
+            setMapWidth();
+            $(window).resize(function(){
+                setMapWidth()
+            });
+
+            function isValidEmailAddress(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+            }
+            $(function() {
+                $('a[href="#ex2"]').click(function (event) {
+                    event.preventDefault();
+                    $(this).modal({
+                        fadeDuration: 200
+                    });
+                });
+
+                $("#email").keyup(function(){
+                    var email = $("#email").val();
+                    if(email != 0)
+                    {
+                        if(isValidEmailAddress(email))
+                        {
+                            $("#email").css({
+                                "border" : "2px green solid"
+                            });
+                        } else {
+                            $("#email").css({
+                                "border" : "2px red solid"
+                            });
+                        }
+                    }
+                });
+
+                var phones = [{ "mask": "(###) ###-##-##"}];
+                $('#phone').inputmask({
+                    mask: phones,
+                    greedy: false,
+                    definitions: { '#': { validator: "[0-9]", cardinality: 1}},
+                    showMaskOnHover: false,
+                    "oncomplete": function(){ $("#phone").css({"border" : "2px green solid"}); },
+                    "oncleared": function(){ alert('inputmask cleared'); },
+                    onKeyValidation: function (key, result) {
+                        $("#phone").css({"border" : "2px red solid"});
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg_contacts_type_index">
+    <form action="" class="modal" id="ex2" method="get" style="display: none;">
+        <div class="order_call_title">
+            <div class="thanks_for_us">Спасибо, что доверяете  нам!</div>
+            <div class="order_call">Оставьте заявку и мы обязательно с вами свяжемся!</div>
+            <p><input id="email" type="text" placeholder="Введите e-mail" /></p>
+            <p><input id="phone" type="text" placeholder="Введите телефон" /></p>
+            <p><input type="submit" value="ОСТАВИТЬ ЗАЯВКУ" /></p>
+        </div>
+    </form>
+    <div id="site_wrap">
+        <div id="row_header">
+            <header id="header">
+                <div class="wrapper_index">
+                    <div id="header_top">
+                        <div id="h_logo">
+                            <a href="index.html">
+                                <img src="images/h_logo_type_2.png" alt="Logo fightclub.kz"/>
+                            </a>
+                        </div>
+                        <div id="h_menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="about.html">О клубе</a></li>
+                                    <li><a href="trener.html">Тренеры</a></li>
+                                    <li><a href="product.html">Программы</a></li>
+                                    <li><a href="abonements.html">Абонементы</a></li>
+                                    <li><a href="contacts.html">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div id="h_content_index">
+                        <nav id="slides">
+                            <ul>
+                                <li>
+                                    <div class="h_r_title_slider">
+                                        <h1>ALMATY<br>FIGHT CLUB</h1>
+                                        <div>Преодолеть страх. Отсечь лишнее.<br>Отвергнуть всё, что не имеет подлинной ценности.</div>
+                                        <a href="#ex2">
+                                            <div class="h_r_button">
+                                                <div class="clear"></div>
+                                                <span>Записаться на бесплатное занятие</span>
+                                                <div class="h_r_button_br"></div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="h_l_bg"><img src="images/bg_index_slid_1.jpg" alt="#"></div>
+                                </li>
+                                <li>
+                                    <div class="h_r_title_slider">
+                                        <h1>ALMATY<br>FIGHT CLUB</h1>
+                                        <div>Преодолеть страх. Отсечь лишнее.<br>Отвергнуть всё, что не имеет подлинной ценности.</div>
+                                        <a href="#ex2">
+                                            <div class="h_r_button">
+                                                <div class="clear"></div>
+                                                <span>Записаться на бесплатное занятие</span>
+                                                <div class="h_r_button_br"></div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="h_l_bg"><img src="images/bg_index_slid_1.jpg" alt="#"></div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!--
+                        <nav id="navigator">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                        -->
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="row_programs">
+            <div class="wrapper">
+                <nav id="row_program_list">
+                    <ul>
+                        <li>
+                            <a href="product_info.html">
+                                <div class="butt_program_t"><div class="butt_program_title">Crossfit</div><div class="butt_program_icon_1"></div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product_info.html">
+                                <div class="butt_program_t"><div class="butt_program_title">ЕДИНОБОРСТВА</div><div class="butt_program_icon_2"></div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product_info.html">
+                                <div class="butt_program_t"><div class="butt_program_title">Фитнес</div><div class="butt_program_icon_3"></div></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product_info.html">
+                                <div class="butt_program_t"><div class="butt_program_title">Детские группы</div><div class="butt_program_icon_4"></div></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="slogan_program">Профессиональный бойцовский клуб. Квалифицированные тренеры. Фитнес.<br>Бассейн. Удобная парковка и спортивный бар.</div>
+            </div>
+        </div>
+        <div id="row_abonements">
+            <div class="wrapper">
+                <div class="section_abonements">
+                <div id="ab_descr">
+                    <div class="club_carts">Абонементы</div>
+                </div>
+                <div id="ab_list">
+                    <div class="divided_row_cards">
+                        <div class="divided_col_cards type1">
+                            <div class="col">
+                                <div class="col_title">12 занятий</div>
+                                <div class="col_descr">61 200 тенге / 3 месяца<br>115 200 тенге / 6 месяцев<br>216 000 тенге / 12 месяцев</div>
+                                <div class="col_info">
+                                    <div class="col_amout">24000 тг. <br><span>месяц</span></div>
+                                    <a href="#ex2">
+                                        <div class="col_button">ВЫБРАТЬ КАРТУ</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided_col_cards type2">
+                            <div class="col">
+                                <div class="col_title">12 занятий  + БАССЕЙН*</div>
+                                <div class="col_descr">73 950 тенге / 3 месяца<br>73 950 тенге / 6 месяцев<br>261 000 тенге / 12 месяцев</div>
+                                <div class="col_info">
+                                    <div class="col_amout">29000 тг. <br><span>месяц</span></div>
+                                    <a href="#ex2">
+                                        <div class="col_button">ВЫБРАТЬ КАРТУ</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided_col_cards type1">
+                            <div class="col">
+                                <div class="col_title">БЕЗЛИМИТ ДНЕВНОЙ*</div>
+                                <div class="col_descr">81 200 тенге / 3 месяца<br>153 600 тенге / 6 месяцев<br>288 000 тенге / 12 месяцев</div>
+                                <div class="col_info">
+                                    <div class="col_amout">32000 тг. <br><span>месяц</span></div>
+                                    <a href="#ex2">
+                                        <div class="col_button">ВЫБРАТЬ КАРТУ</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided_col_cards type1">
+                            <div class="col">
+                                <div class="col_title">БЕЗЛИМИТ**</div>
+                                <div class="col_descr">94 350 тенге / 3 месяца<br>177 600 тенге / 6 месяцев<br>333 000 тенге / 12 месяцев</div>
+                                <div class="col_info">
+                                    <div class="col_amout">37000 тг. <br><span>месяц</span></div>
+                                    <a href="#ex2">
+                                        <div class="col_button">ВЫБРАТЬ КАРТУ</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided_col_cards type3">
+                            <div class="col">
+                                <div class="col_title">ВЕСЬ АПРЕЛЬ!</div>
+                                <div class="col_title_pr">Скидка на ВСЕ Абонементы <br>&nbsp;<br>&nbsp;</div>
+                                <div class="col_info">
+                                    <div class="col_percent">30%</div>
+                                    <a href="#ex2">
+                                        <div class="col_button">ВЫБРАТЬ КАРТУ</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divided_col_cards untype">
+                            <div class="col">
+                                <div class="info_card">Дети с 8-14 лет <br>
+                                    * 5 посещений в бассейн в дневное время и сб/вс <br>
+                                    ** 6 посещений в бассейн в любое время
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="row_benefict">
+            <div class="wrapper">
+                <div class="row_benefict_img">
+                    <img src="images/bg_beneficts.jpg" alt="#">
+                </div>
+                <div class="row_bernefict_text">
+                    <div class="block_text_contacts">
+                        <div class="title_t1"><h1>Go train<br/>Go fight</h1></div>
+                        <span class="text_t1">
+                            <div><div class="ul_li">.01</div> <div class="li">Индивидуальный подход</div></div>
+                            <div><div class="ul_li">.02</div> <div class="li">Функциональная диагностика у спортивного врача</div></div>
+                            <div><div class="ul_li">.03</div> <div class="li">Инструктаж по использованию спортивного оборудования</div></div>
+                            <div><div class="ul_li">.04</div> <div class="li">Рекомендации по нагрузкам и правильному питанию</div></div>
+                            <div><div class="ul_li">.05</div> <div class="li">Опытные тренеры</div></div>
+                            <div><div class="ul_li">.06</div> <div class="li">Возможность дополнить силовые и другие виды занятий массажем и терапевтическими процедурами</div></div>
+                            <div><div class="ul_li">.07</div> <div class="li">Оборудование и спортивный инвентарь от известных зарубежных производителей</div></div>
+                        </span>
+                        <a href="trener.html">
+                            <div class="benefict_button">
+                                <span>Посмотреть на нашу команду тренеров</span>
+                                <div class="h_r_button_br"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="row_contacts">
+            <div class="wrapper">
+                <div class="divided_row">
+                    <div class="row_site_contacts">
+                        <div class="block_text_contacts">
+                            <div class="title_t1"><h1>КОНТАКТЫ</h1></div>
+                            <span class="text_t1">ул. Достык 105, Алматы, Казахстан <br><br>+7 (707) 368-75-26<br><br>info@fightclub.kz</span>
+                            <div class="social_net">
+                                <nav>
+                                    <ul>
+                                        <li><a href="https://m.facebook.com/almatyfightclub/?ref=bookmarks"><img src="images/icon-facebook.png" alt="facebook"></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCzAUF76Y1TkrvGyw8n2hp0g"><img src="images/icon-vk.png" alt="vk"></a></li>
+                                        <li><a href="https://www.instagram.com/almaty_fight_club/"><img src="images/icon-instagram.png" alt="instagram"></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row_google_widget">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1222.366127782599!2d76.96230575883096!3d43.224316349493726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f087742a629%3A0xbd282c8aab6b9364!2z0L_RgNC-0YHQv9C10LrRgiDQlNC-0YHRgtGL0LogMTA1LCDQkNC70LzQsNGC0YssINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sru!4v1493651870459" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="wrapper">
+            <div id="f_content">
+                <div id="f_logo">
+                    <a href="index.html"><img src="images/f_logo.png" alt="Logo fightclub.kz"></a>
+                </div>
+                <div class="social_net">
+                    <nav>
+                        <ul>
+                            <li><a href="https://m.facebook.com/almatyfightclub/?ref=bookmarks"><img src="images/icon-facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCzAUF76Y1TkrvGyw8n2hp0g"><img src="images/icon-vk.png" alt="vk"></a></li>
+                            <li><a href="https://www.instagram.com/almaty_fight_club/"><img src="images/icon-instagram.png" alt="instagram"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="f_copyright">
+                    <span>Copyright © 2017. AFC. Все права защищены. </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

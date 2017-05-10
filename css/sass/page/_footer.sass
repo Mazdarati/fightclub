@@ -1,0 +1,29 @@
+#footer
+  position: relative
+  @include bgColorHex(#0d0d0e)
+  @include hW(150px, auto)
+  #f_content
+    @include pAllBy2(55px,0)
+    > div
+      float: left
+      @include hW(inherit,33%)
+  #f_logo
+    a
+      float: inherit
+  .social_net
+    @include mTop(8px)
+    @include tA(center)
+    nav
+      li
+        display: inline-block
+        position: relative
+        @include mAllBy2(0,20px)
+        a
+          color: #385a9a
+          @include fRegularS(14px)
+  #f_copyright
+    @include mTop(10px)
+    @include tA(right)
+    > span
+      color: #ffffff
+      @include fRegularS(14px)

@@ -1,0 +1,36 @@
+$posAbsolute: absolute
+$posFixed: fixed
+@mixin posAbs($type,$value)
+  position: $posAbsolute
+  $type: $value
+@mixin posAbsAfter($ver,$valueVer,$hor,$valueHor)
+  position: $posAbsolute
+  content: ''
+  #{$ver}: $valueVer
+  #{$hor}: $valueHor
+@mixin posAbsBy($ver,$valueVer,$hor,$valueHor)
+  position: $posAbsolute
+  #{$ver}: $valueVer
+  #{$hor}: $valueHor
+@mixin posAbsByAxis($ver,$valueVer,$hor,$valueHor)
+  #{$ver}: $valueVer
+  #{$hor}: $valueHor
+@mixin posAbsByCenter()
+  position: $posAbsolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+@mixin posFix($type,$value)
+  position: $posAbsolute
+  #{$type}: $value
+@mixin posFixBy($ver,$valueVer,$hor,$valueHor)
+  position: $posAbsolute
+  #{$ver}: $valueVer
+  #{$hor}: $valueHor
+@mixin posFixByCenter()
+  position: $posAbsolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0

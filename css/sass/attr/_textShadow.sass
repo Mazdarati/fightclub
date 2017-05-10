@@ -1,0 +1,17 @@
+@mixin textShadowNone()
+  text-shadow: none
+@mixin textShadowHex($hor,$ver,$blur,$colourShadow)
+  text-shadow: $hor $ver $blur $colourShadow
+@mixin textShadowRgb($hor,$ver,$blur,$colourR,$colourG,$colourB)
+  text-shadow: $hor $ver $blur rgb($colourR,$colourG,$colourB)
+@mixin textShadowRgba($hor,$ver,$blur,$colourR,$colourG,$colourB,$alpha)
+  text-shadow: $hor $ver $blur rgba($colourR,$colourG,$colourB,$alpha)
+@mixin textRgbaForInsetShadow($colourR,$colourG,$colourB,$alpha)
+  color: rgba($colourR,$colourR,$colourB,$alpha)
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  background-clip: text
+@mixin textShadowInsetHex($hor,$ver,$blur,$colourShadow)
+  text-shadow: $hor $ver $blur $colourShadow, 0 0 0 #000, $hor $ver $blur $colourShadow
+@mixin textShadowInsetRgb($hor,$ver,$blur, $colourR,$colourG,$colourB)
+  text-shadow: $hor $ver $blur rgb($colourR,$colourG,$colourB), 0 0 0 #000, $hor $ver $blur rgb($colourR,$colourG,$colourB)

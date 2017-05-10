@@ -1,0 +1,81 @@
+.section_products, .section_treners
+  @include display(table)
+  @include mAllBy3(100px,0,180px)
+  > div
+    @include display(inline-block)
+  .title_p
+    @include fBoldS(32px)
+    @include tT(uppercase)
+    line-height: 40px
+    @include hW(auto, 224px)
+    @include vA(top)
+  .list_p
+    @include hW(auto, 776px)
+    &:after, &:before
+      content: " "
+      clear: both
+    > div
+      float: left
+      cursor: pointer
+      position: relative
+      @include mAllBy2(2px, 2px)
+      &:hover div .button_block
+        display: block
+      .block_a
+        @include pAllBy2(23px,20px)
+        @include hW(270px, 150px)
+        .img_block
+          position: absolute
+          bottom: 0
+          right: 0
+          img
+            @include mBottom(-5px)
+        .title_block
+          @include fBoldS(20px)
+          @include tT(uppercase)
+          line-height: 24px
+          word-wrap: break-word
+        .icon_block
+          @include hW(46px,47px)
+          @include mTop(14px)
+          @include bgUrl('../../images/icons/icon_program.png')
+        .button_block
+          display: none
+          position: absolute
+          bottom: 0
+          @include mAllBy4(0,0,20px,1px)
+          .button_block_r
+            position: relative
+            @include pAllBy2(16px, 23px)
+            @include tA(center)
+            @include bgColorHex(#c91e39)
+            span
+              color: #ffffff
+              font-size: 14px
+              @include tT(uppercase)
+            .button_pl_br
+              @include hW(4px,25%)
+              position: absolute
+              bottom: 0
+              right: 0
+              @include bgColorHex(#9b172c)
+.section_products
+  .title_p
+    color: #0d0d0e
+  .list_p
+    > div
+      @include bgColorHex(#0d0d0e)
+      .title_block
+        color: #e7e7e5
+.section_treners
+  .title_p
+    @include hW(auto, 184px)
+    color: #e7e7e5
+  .list_p
+    @include hW(auto, 816px)
+    > div
+      @include bgColorHex(#e2e2e2)
+      .block_a
+        @include hW(270px,160px)
+      .title_block
+        color: #0d0d0e

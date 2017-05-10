@@ -1,0 +1,20 @@
+@mixin pNone()
+  padding: $indentNone
+@mixin pInherit()
+  padding: $indentInherit
+@mixin pAll($size)
+  padding: $size
+@mixin pLeft($size)
+  padding-left: $size
+@mixin pRight($size)
+  padding-right: $size
+@mixin pTop($size)
+  padding-top: $size
+@mixin pBottom($size)
+  padding-bottom: $size
+@mixin pAllBy2($sizeTB,$sizeRL)
+  padding: $sizeTB $sizeRL
+@mixin pAllBy3($sizeT,$sizeRL,$sizeB)
+  padding: $sizeT $sizeRL $sizeB
+@mixin pAllBy4($sizeT,$sizeR,$sizeB,$sizeL)
+  padding: $sizeT $sizeR $sizeB $sizeL

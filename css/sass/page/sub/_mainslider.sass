@@ -1,0 +1,59 @@
+#sliderbar
+  position: relative
+  @include hW(300px,inherit)
+  @include bAllRgba(1px,0,0,0,0.2,solid)
+  @include rounded(10px)
+  @include over(hidden)
+  @include bgUrl("../images/logo.png")
+  @include boxShadowRgba(0px,1px,5px,0,0,0,0.5)
+  @include mBottom(15px)
+  .slider_content
+    position: relative
+    @include hWInh()
+    .slider_information
+      @include posAbsBy(left,-1px,bottom,15px)
+      @include hW(120px,430px)
+      @include over(hidden)
+      z-index: 3
+      > div
+        @include pAllBy2(0,16px)
+        @include over(hidden)
+      .stitle
+        font-size: 20px
+        color: #f2f2f2
+        line-height: 40px
+        max-height: 80px
+        @include bgColorRgba(0,0,0,0.75)
+      .stext
+        font-size: 14px
+        color: #333333
+        max-height: 80px
+        @include bgColorRgba(252,252,252,0.75)
+    .slider_images
+      @include hWInh()
+      ul
+        @include hWInh()
+        li
+          float: left
+          @include hWInh()
+          img
+            @include hW(300px,960px)
+            @include rounded(10px)
+            @include over(hidden)
+    .slider_dots
+      .dots
+        @include posAbsBy(top,5px,right,0)
+        li
+          display: inline-block
+          cursor: pointer
+          @include opacity(0.5)
+          @include hW(8px,8px)
+          @include bAll(2px,#ffffff,solid)
+          @include rounded(6px)
+          text-indent: -999em
+          @include bgColorHex(#ffffff)
+          @include mAllBy2(0,4px)
+          transition: background 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0, opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0
+        li.active
+          @include bgColorHex(#ffffff)
+          @include opacity(1)

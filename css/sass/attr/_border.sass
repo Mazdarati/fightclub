@@ -1,0 +1,31 @@
+$bNoneValue: none
+@mixin bNone()
+  border: $bNoneValue
+@mixin bInherit()
+  border: $indentInherit
+@mixin bAll($size, $colour, $type)
+  border: $size $colour $type
+@mixin bAllRgba($size,$colourR,$colourG,$colourB,$alpha,$type)
+  border: $size rgba($colourR,$colourG,$colourB,$alpha) $type
+@mixin bLeft($size, $colour, $type)
+  border-left: $size $colour $type
+@mixin bRight($size, $colour, $type)
+  border-right: $size $colour $type
+@mixin bTop($size, $colour, $type)
+  border-top: $size $colour $type
+@mixin bBottom($size, $colour, $type)
+  border-bottom: $size $colour $type
+@mixin rounded($radius: $indentNone)
+  border-radius: $radius
+  -o-border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+@mixin roundedAxis($vert, $horz, $radius: $indentNone)
+  border-#{$vert}-#{$horz}-radius: $radius
+  -o-border-radius-#{$vert}#{$horz}: $radius
+  -moz-border-radius-#{$vert}#{$horz}: $radius
+  -webkit-border-#{$vert}-#{$horz}-radius: $radius
+@mixin bSpacing($pVr, $pHr)
+  border-spacing: $pVr $pHr
+@mixin bCollapse($value)
+  border-collapse: $value

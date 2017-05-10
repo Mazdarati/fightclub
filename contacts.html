@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <title>fightclub.kz</title>
+    <meta name="keywords" content="compete" />
+    <meta name="description" content="" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/sass/font.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/sass/common.css" type="text/css" media="screen, projection" />
+    <!-- Script -->
+    <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function setMapWidth() {
+                googleWidthSize = window.innerWidth/2+100;
+                if ($("#site_wrap").height() > $(window).height()) {
+                    googleWidthSize = googleWidthSize-9;
+                }
+                $("iframe").width(googleWidthSize);
+            }
+            setMapWidth();
+            $(window).resize(function(){
+                setMapWidth()
+            });
+        });
+    </script>
+</head>
+<body class="bg_contacts_type_2">
+<div id="site_wrap">
+    <div class="wrapper">
+        <header id="header">
+            <div id="header_top">
+            <div id="h_logo">
+                <a href="index.html">
+                    <img src="images/h_logo_type_2.png" alt="Logo fightclub.kz"/>
+                </a>
+            </div>
+            <div id="h_menu">
+                <nav>
+                    <ul>
+                        <li><a href="about.html">О клубе</a></li>
+                        <li><a href="trener.html">Тренеры</a></li>
+                        <li><a href="product.html">Программы</a></li>
+                        <li><a href="abonements.html">Абонементы</a></li>
+                        <li class="active"><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+        </header>
+        <div id="content">
+            <div class="section_contacts">
+                <div class="divided_row">
+                    <div class="row text_contacts">
+                        <div class="title_t1"><h1>КОНТАКТЫ</h1></div>
+                        <span class="text_t1">ул. Достык 105, Алматы, Казахстан <br><br>+7 (707) 368-75-26<br><br>
+                            <a href="mailto:info@fightclub.kz" class="mail">info@fightclub.kz</a></span>
+                        <div class="social_net">
+                            <nav>
+                                <ul>
+                                    <li><a href="https://m.facebook.com/almatyfightclub/?ref=bookmarks"><img src="images/icon-facebook.png" alt="facebook"></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCzAUF76Y1TkrvGyw8n2hp0g"><img src="images/icon-vk.png" alt="vk"></a></li>
+                                    <li><a href="https://www.instagram.com/almaty_fight_club/"><img src="images/icon-instagram.png" alt="instagram"></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row google_widget">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1222.366127782599!2d76.96230575883096!3d43.224316349493726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f087742a629%3A0xbd282c8aab6b9364!2z0L_RgNC-0YHQv9C10LrRgiDQlNC-0YHRgtGL0LogMTA1LCDQkNC70LzQsNGC0YssINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sru!4v1493651870459" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <footer id="footer">
+        <div class="wrapper">
+            <div id="f_content">
+                <div id="f_logo">
+                    <a href="index.html"><img src="images/f_logo.png" alt="Logo fightclub.kz"></a>
+                </div>
+                <div class="social_net">
+                    <nav>
+                        <ul>
+                            <li><a href="https://m.facebook.com/almatyfightclub/?ref=bookmarks"><img src="images/icon-facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCzAUF76Y1TkrvGyw8n2hp0g"><img src="images/icon-vk.png" alt="vk"></a></li>
+                            <li><a href="https://www.instagram.com/almaty_fight_club/"><img src="images/icon-instagram.png" alt="instagram"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="f_copyright">
+                    <span>Copyright © 2017. AFC. Все права защищены. </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

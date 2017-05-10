@@ -1,0 +1,122 @@
+.order_call_title
+  text-align: center
+  @include pAllBy2(50px, 0px)
+  .thanks_for_us
+    @include fBoldS(24px)
+    line-height: 24px
+    color: #040405
+    @include mBottom(12px)
+  .order_call
+    @include fRegularS(15px)
+    line-height: 15px
+    color: #040405
+    @include mBottom(34px)
+  input[type="text"]
+    @include pAllBy2(12px,15px)
+    @include fRegularS(15px)
+    line-height: 15px
+    width: 250px
+    color: #040405
+    border: 2px #040405 solid
+    &:focus, &:active
+      outline: none
+      outline-offset: 0
+  input[type="submit"]
+    @include mTop(10px)
+    @include pAllBy2(16px, 74px)
+    @include tA(center)
+    @include bgColorHex(#c91e39)
+    color: #ffffff
+    font-size: 14px
+    text-transform: uppercase
+    cursor: pointer
+    position: relative
+    z-index: 7
+    border: none
+    &:focus, &:active
+      outline: none
+      outline-offset: 0
+#ex2.modal_trener
+  @include bgColorHex(#e2e2e2)
+  max-width: 900px
+  padding: 0px
+  > div
+    @include pAllBy2(40px,100px)
+    @include rounded(8px)
+  .trener_info
+    @include pAllBy3(40px,100px,0px)
+    @include bgColorHex(#e2e2e2)
+    &:after, &:before
+      display: table
+      content: " "
+      clear: both
+    > div
+      float: left
+      .trener_name
+        @include fRegularS(28px)
+        @include tT(uppercase)
+        color: #0d0d0e
+        @include mBottom(16px)
+        @include mTop(60px)
+      .trener_type
+        @include fRegularS(18px)
+        color: #0d0d0e
+        @include mBottom(26px)
+      .trener_order_btn
+        float: left
+        @include pAllBy2(16px, 20px)
+        @include tA(center)
+        @include bgColorHex(#c91e39)
+        color: #ffffff
+        font-size: 14px
+        text-transform: uppercase
+        cursor: pointer
+        position: relative
+        .button_pl_br
+          @include hW(4px,25%)
+          position: absolute
+          bottom: 0
+          right: 0
+          @include bgColorHex(#9b172c)
+    .trener_base_info
+      width: 339px
+      @include mRight(22px)
+    .img_trener
+      float: right
+      max-width: 339px
+      max-height: 250px
+      @include mBottom(-5px)
+  .trener_descr
+    @include bgColorHex(#e7e7e5)
+    &:after, &:before
+      display: table
+      content: " "
+      clear: both
+    > div
+      float: left
+    .trener_description_text
+      @include fRegularS(15px)
+      color: #0d0d0e
+      width: 339px
+      word-wrap: break-word
+      @include tA(justify)
+      @include mRight(22px)
+    .trener_list_p
+      @include hW(auto,339px)
+      table
+        @include mBottom(5px)
+        td
+          @include fRegularS(15px)
+          @include tA(center)
+          @include pAllBy2(4px, 0)
+        thead
+          td
+            @include bgColorHex(#0d0d0e)
+            color: #fff
+            @include bBottom(7px, #e7e7e5, solid)
+        tbody
+          tr
+            @include bgColorHex(#d1d1cf)
+            td
+              color: #0d0d0e
+              @include bBottom(2px, #e7e7e5, solid)

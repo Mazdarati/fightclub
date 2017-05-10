@@ -1,0 +1,26 @@
+@mixin boxSizing($value)
+  box-sizing: $value
+@mixin boxShadowHex($hor,$ver,$blur,$colour,$spread: 0)
+  -webkit-box-shadow: $hor $ver $blur $spread $colour
+  -moz-box-shadow: $hor $ver $blur $spread $colour
+  box-shadow: $hor $ver $blur $spread $colour
+@mixin boxShadowRgb($hor,$ver,$blur,$colourR,$colourG,$colourB,$spread: 0)
+  -webkit-box-shadow: $hor $ver $blur $spread rgb($colourR,$colourG,$colourB)
+  -moz-box-shadow: $hor $ver $blur $spread rgb($colourR,$colourG,$colourB)
+  box-shadow: $hor $ver $blur $spread rgb($colourR,$colourG,$colourB)
+@mixin boxShadowRgba($hor,$ver,$blur,$colourR,$colourG,$colourB,$alpha,$spread: 0)
+  -webkit-box-shadow: $hor $ver $blur $spread rgba($colourR,$colourG,$colourB,$alpha)
+  -moz-box-shadow: $hor $ver $blur $spread rgba($colourR,$colourG,$colourB,$alpha)
+  box-shadow: $hor $ver $blur $spread rgba($colourR,$colourG,$colourB,$alpha)
+@mixin boxShadowHexInset($hor,$ver,$blur,$colour,$spread: 0)
+  -webkit-box-shadow: inset $hor $ver $blur $spread $colour
+  -moz-box-shadow: inset $hor $ver $blur $spread $colour
+  box-shadow: inset $hor $ver $blur $spread $colour
+@mixin boxShadowRgbInset($hor,$ver,$blur,$colourR,$colourG,$colourB,$spread: 0)
+  -webkit-box-shadow: inset $hor $ver $blur $spread rgb($colourR,$colourG,$colourB)
+  -moz-box-shadow: inset $hor $ver $blur $spread rgb($colourR,$colourG,$colourB)
+  box-shadow: inset $hor $ver $blur $spread rgb($colourR,$colourG,$colourB)
+@mixin boxShadowRgbaInset($hor,$ver,$blur,$colourR,$colourG,$colourB,$alpha,$spread: 0)
+  -webkit-box-shadow: inset $hor $ver $blur $spread rgba($colourR,$colourG,$colourB,$alpha)
+  -moz-box-shadow: inset $hor $ver $blur $spread rgba($colourR,$colourG,$colourB,$alpha)
+  box-shadow: inset $hor $ver $blur $spread rgba($colourR,$colourG,$colourB,$alpha)

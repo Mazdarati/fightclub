@@ -1,0 +1,64 @@
+$bgColorRed: #FF0000
+$bgColorOrange: #CC3232
+$bgColorYellow: #FFFF00
+$bgColorGreen: #00FF00
+$bgColorAque: #00FFFF
+$bgColorBlue: #0000FF
+$bgColorPurple: #800080
+$bgColorWhite: #FFFFFF
+$bgColorBlack: #000000
+$bgColorGray: #666666
+$bgColorTransparent: transparent
+
+@mixin bgColorHex($colour: $bgColorTransparent)
+  background: $colour
+@mixin bgColorRgb($colourR,$colourG,$colourB)
+  background: rgb($colourR,$colourG,$colourB)
+@mixin bgColorRgba($colourR,$colourG,$colourB,$alpha)
+  background: rgba($colourR,$colourG,$colourB,$alpha)
+@mixin bgUrlRX($url)
+  background: url($url) repeat-x
+@mixin bgUrlRXColour($url,$colour: $bgColorTransparent)
+  background: $colour url($url) repeat-x
+@mixin bgUrlRY($url)
+  background: url($url) repeat-y
+@mixin bgUrl($url)
+  background: url($url) no-repeat
+@mixin bgUrlPosition($pX,$pY)
+  background-position: $pX $pY
+@mixin bgGradientVrHex($colour1,$colour2,$colour3,$colour4)
+  background: $colour1
+  background: -moz-linear-gradient(top,  $colour1 0%, $colour2 50%, $colour3 51%, $colour4 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$colour1), color-stop(50%,$colour2), color-stop(51%,$colour3), color-stop(100%,$colour4))
+  background: -webkit-linear-gradient(top,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  background: -o-linear-gradient(top,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  background: -ms-linear-gradient(top,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  background: linear-gradient(to bottom,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$colour1, endColorstr=$colour4,GradientType=0 )
+@mixin bgGradientHrHex($colour1,$colour2,$colour3,$colour4)
+  background: $colour1
+  background: -moz-linear-gradient(left,  $colour1 0%, $colour2 50%, $colour3 51%, $colour4 100%)
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$colour1), color-stop(50%,$colour2), color-stop(51%,$colour3), color-stop(100%,$colour4))
+  background: -webkit-linear-gradient(left,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  background: -o-linear-gradient(left,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  background: -ms-linear-gradient(left,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  background: linear-gradient(to right,  $colour1 0%,$colour2 50%,$colour3 51%,$colour4 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$colour1, endColorstr=$colour4,GradientType=1 )
+@mixin bgGradientVrHexSolid($colour1,$colour2)
+  background: $colour1
+  background: -moz-linear-gradient(top,  $colour1 0%, $colour2 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$colour1), color-stop(100%,$colour2))
+  background: -webkit-linear-gradient(top,  $colour1 0%,$colour2 100%)
+  background: -o-linear-gradient(top,  $colour1 0%,$colour2 100%)
+  background: -ms-linear-gradient(top,  $colour1 0%,$colour2 100%)
+  background: linear-gradient(to bottom,  $colour1 0%,$colour2 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$colour1, endColorstr=$colour2,GradientType=0 )
+@mixin bgGradientHrHexSolid($colour1,$colour2)
+  background: $colour1
+  background: -moz-linear-gradient(left,  $colour1 0%, $colour2 100%)
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$colour1), color-stop(100%,$colour2))
+  background: -webkit-linear-gradient(left,  $colour1 0%,$colour2 100%)
+  background: -o-linear-gradient(left,  $colour1 0%,$colour2 100%)
+  background: -ms-linear-gradient(left,  $colour1 0%,$colour2 100%)
+  background: linear-gradient(to right,  $colour1 0%,$colour2 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$colour1, endColorstr=$colour2,GradientType=1 )

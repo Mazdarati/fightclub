@@ -1,0 +1,177 @@
+#search_nav
+  @include pAll(12px)
+  @include bgColorHex(#f0f0f0)
+  @include bAll(1px,solid,#afafaf)
+  form
+    > div
+      display: inline-block
+    .spec_for_marker
+      position: relative
+      @include hW(38px, inherit)
+      input
+        @include hWInh()
+        @include pLeft(35px)
+        color: #afafaf
+        @include fBoldS(18px)
+  button
+    @include hW(41px,100px)
+    @include bgColorHex(#ff9c00)
+    @include bNone()
+    @include vA(middle)
+    cursor: pointer
+#search_content
+  float: left
+  @include pAllBy2(20px,0)
+  @include hWInh()
+  #sc_parameters
+    width: 218px
+    float: inherit
+    #sc_set_trip
+      @include pAllBy2(15px, 2px)
+      @include bgColorHex(#1dbc24)
+      span
+        color: #ffffff
+        @include fBoldS(15px)
+      a:hover
+        @include tD(none)
+    #sc_setting
+      @include mAllBy2(10px,0)
+      @include pAll(10px)
+      @include bgColorHex(#f0f0f0)
+      @include bAll(1px,solid,#afafaf)
+      form
+        > div
+          @include bBottom(1px,solid, #e2e2e2)
+          @include pAllBy2(10px,0)
+          .ch_1
+            cursor: pointer
+          input[type=checkbox]
+            @include bAll(1px, solid, #b5b5b5)
+            color: #b5b5b5
+            @include pAll(1px)
+          label
+            color: #4d4d4d
+            @include mLeft(10px)
+            font-size: 14px
+          h2
+            color: #4d4d4d
+            font-size: 17px
+          .spec_for_date
+            position: relative
+            @include hW(30px, inherit)
+            @include mAllBy2(15px,0)
+            input
+              @include hWInh()
+              @include pLeft(35px)
+              color: #afafaf
+          #sc_time_slider-range, #sc_price_slider-range
+            @include mAllBy2(10px,0)
+          input[type=radio]
+            @include rounded(10px)
+            @include mAllBy2(5px,0)
+            color: #b5b5b5
+        > div:last-child
+          border-bottom: none
+  #sc_content
+    width: 710px
+    float: right
+    #sc_sorts
+      float: left
+      width: 708px
+      @include bgColorHex(#f0f0f0)
+      @include bAll(1px,solid,#afafaf)
+      > div
+        @include pAll(15px)
+      .title
+        float: inherit
+        @include fBoldS(20px)
+      .sorted_by
+        float: right
+        font-size: 15px
+        font-weight: 400
+        a
+          position: relative
+        a:hover
+          color: #1dbc24
+          font-weight: bold
+        .active
+          color: #1dbc24
+          font-weight: bold
+          margin-right: 10px
+        .active:after
+          content: ''
+          @include posAbsBy(right,-10px,bottom,5px)
+          @include hW(9px,9px)
+          @include bgUrl('../../images/icons/18.png')
+    #sc_results
+      @include mAllBy2(12px,0)
+      table
+        border-collapse: separate
+      tr
+        @include pAllBy2(10px,0)
+        @include mAllBy2(10px,0)
+        @include bBottom(1px,solid, #d3d3d3)
+      tr:last-child
+        border: none
+      td
+        @include vA(top)
+      .tp_p_20
+        @include pAllBy2(0,10px)
+        > div
+          @include mBottom(5px)
+      .tp_ta_right
+        text-align: right
+        @include pRight(30px)
+      .user_profile
+        > div
+          float: left
+        .user_info
+          margin-left: 5px
+          .user_name
+            @include fBoldS(16px)
+            color: #2f2f2f
+          .user_year_old
+            @include fBoldS(12px)
+            color: #afafaf
+      .trip_when
+        @include fBoldS(19px)
+        color: #1dbc24
+      .trip_road
+        font-size: 16px
+        font-weight: 400
+        color: #a8a8a8
+      .trip_dep, .trip_dest
+        position: relative
+        font-size: 14px
+        color: #4d4d4d
+      .trip_user_car
+        font-size: 14px
+        color: #a0a0a0
+        strong
+          color: #4d4d4d
+      .trip_price
+        .pr_c1
+          font-size: 30px
+          color: #1dba24
+        .pr_c2
+          @include mTop(8px)
+          font-size: 15px
+          color: #1dba24
+      .trip_place
+        @include mTop(75px)
+        font-size: 14px
+        color: #4d4d4d
+      .user_rating, .user_prefers
+        li
+          float: left
+          @include mRight(2px)
+    #sc_pagination
+      float: left
+      width: inherit
+      @include mAllBy2(10px,0)
+      .title
+        @include fRegularS(16px)
+        color: #000000
+        float: inherit
+      .pagination
+        float: right

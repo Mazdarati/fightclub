@@ -1,0 +1,20 @@
+@mixin mNone()
+  margin: $indentNone
+@mixin mAuto()
+  margin: 0 $indentAuto
+@mixin mAll($size)
+  margin: $size
+@mixin mLeft($size)
+  margin-left: $size
+@mixin mRight($size)
+  margin-right: $size
+@mixin mTop($size)
+  margin-top: $size
+@mixin mBottom($size)
+  margin-bottom: $size
+@mixin mAllBy2($sizeTB,$sizeRL)
+  margin: $sizeTB $sizeRL
+@mixin mAllBy3($sizeT,$sizeRL,$sizeB)
+  margin: $sizeT $sizeRL $sizeB
+@mixin mAllBy4($sizeT,$sizeR,$sizeB,$sizeL)
+  margin: $sizeT $sizeR $sizeB $sizeL

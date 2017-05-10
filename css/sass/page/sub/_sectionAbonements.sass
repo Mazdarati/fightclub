@@ -1,0 +1,113 @@
+.section_abonements
+  @include hWInh()
+  @include pAllBy2(50px,0)
+  #ab_descr
+    @include mBottom(50px)
+    > div
+      @include display(inline-block)
+      word-break: normal
+    .club_carts
+      @include fBoldS(40px)
+      line-height: 50px
+      @include mRight(40px)
+    .club_descr
+      max-width: 790px
+      font-size: 14px
+      .club_carts_include
+        @include fBold()
+  #ab_list
+    @include mBottom(50px)
+    .divided_row_cards
+      @include hWInh()
+      &:after, &:before
+        content: " "
+        clear: both
+        display: table
+      .divided_col_cards
+        float: left
+        @include hW(auto,33%)
+        .col
+          @include pAllBy4(21px,18px,21px,26px)
+          @include mAllBy2(7px,5px)
+      .type1, .type2, .type3
+        .col
+          @include bgColorHex(#ffffff)
+          .col_title
+            text-transform: uppercase
+            @include fBoldS(24px)
+            color: #0d0d0e
+            @include mAllBy2(15px, 0)
+          .col_descr
+            font-size: 14px
+            color: #0d0d0e
+          .col_info
+            @include mTop(40px)
+            &:after, &:before
+              content: " "
+              clear: both
+              display: table
+            .col_amout
+              float: left
+              @include mTop(12px)
+              @include fRegularS(29px)
+              @include tA(left)
+              color: #0d0d0e
+              line-height: 12px
+              span
+                font-size: 14px
+            .col_button
+              float: right
+              @include pAllBy2(16px, 20px)
+              @include tA(right)
+              @include bgColorHex(#c91e39)
+              color: #ffffff
+              font-size: 14px
+              text-transform: uppercase
+              cursor: pointer
+              position: relative
+              .button_pl_br
+                @include hW(4px,25%)
+                position: absolute
+                bottom: 0
+                right: 0
+                @include bgColorHex(#9b172c)
+      .type2
+        .col
+          @include bgColorHex(#0d0d0e)
+          .col_title
+            color: #ffffff
+          .col_descr
+            color: #ffffff
+          .col_info
+            .col_amout
+              color: #ffffff
+      .type3
+        .col
+          background: #ff0028 url("../../images/abonements_pr.png") no-repeat
+          background-position-y: bottom
+          background-position-x: right
+          background-size: cover
+          .col_title
+            color: #ffffff
+          .col_title_pr
+            font-size: 17px
+            color: #ffffff
+          .col_info
+            .col_percent
+              float: left
+              @include fRegularS(55px)
+              @include tA(left)
+              @include mTop(16px)
+              color: #ffffff
+            .col_button
+              @include bgColorHex(#ffffff)
+              color: #0d0d0e
+      .untype
+        .col
+          @include pAllBy4(21px,0,21px,16px)
+          .info_card
+            @include fRegularS(14px)
+            text-align: left
+            color: #0d0d0e
+            word-break: normal
+            @include mTop(115px)

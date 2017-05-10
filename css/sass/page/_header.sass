@@ -1,0 +1,145 @@
+#header
+  position: relative
+  #h_logo
+    float: left
+    @include hW(81px,217px)
+    @include mAllBy2(20px,0)
+    a
+      float: inherit
+  #header_top
+    @include hW(121px,inherit)
+    z-index: 20
+    #h_menu
+      float: right
+      height: 81px
+      @include mAllBy2(20px,0)
+      nav
+        height: inherit
+        ul
+          height: inherit
+          li
+            height: inherit
+            display: inline-block
+            position: relative
+            @include mAllBy4(0,0,0,50px)
+            line-height: 81px
+            z-index: 12
+            a
+              //-webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s
+              //transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s
+              @include fRegularS(16px)
+              @include tT(uppercase)
+              @include pBottom(5px)
+              text-decoration: none
+            a:hover
+              @include bBottom(2px,solid,#f22047)
+          .active
+            a
+              @include bBottom(2px,solid,#f22047)
+  #h_content
+    position: relative
+    @include hW(310px,auto)
+    z-index: -1
+    #h_r_title
+      @include hW(auto, 360px)
+      @include pAllBy2(75px,0)
+      h1
+        font-size: 50px
+        line-height: 50px
+        @include tT(uppercase)
+        color: #0d0d0e
+      div
+        color: #0d0d0e
+        font-size: 14px
+        @include mTop(28px)
+        word-wrap: break-word
+    #h_l_bg
+      position: absolute
+      bottom: 0
+      z-index: 0
+      right: -100px
+  #h_content_index
+    position: absolute
+    @include hW(620px,100%)
+    top: 0
+    left: 0
+    > nav
+      @include hWInh()
+      position: relative
+      overflow: hidden
+      > ul
+        @include hWInh()
+        position: relative
+        overflow: hidden
+        > li
+          @include hWInh()
+          position: absolute
+          bottom: 0
+          right: 0
+          .h_r_title_slider
+            @include mAuto()
+            @include hW(auto,1000px)
+            @include pAllBy2(220px,0)
+            z-index: 3
+            h1
+              font-size: 40px
+              line-height: 40px
+              @include tT(uppercase)
+              color: #ffffff
+              z-index: 4
+            > div
+              color: #ffffff
+              font-size: 18px
+              @include mTop(14px)
+              word-wrap: break-word
+              z-index: 5
+            > a
+              z-index: 6
+              .h_r_button
+                float: left
+                @include mTop(28px)
+                @include pAllBy2(16px, 20px)
+                @include tA(right)
+                @include bgColorHex(#c91e39)
+                color: #ffffff
+                font-size: 14px
+                text-transform: uppercase
+                cursor: pointer
+                position: relative
+                z-index: 7
+                &:after, &:before
+                  clear: both
+                .h_r_button_br
+                  @include hW(4px,25%)
+                  position: absolute
+                  bottom: 0
+                  right: 0
+                  @include bgColorHex(#9b172c)
+                  z-index: 8
+          .h_l_bg
+            position: absolute
+            bottom: 0
+            right: 0
+            @include hWInh()
+            background: #040405
+            z-index: -1
+            img
+              position: absolute
+              bottom: 0
+              right: 0
+.bg_contacts_type_1
+  #h_menu
+    a
+      color: #0d0d0e
+.bg_contacts_type_2
+  //#h_logo
+    @include hW(80px,196px)
+  #h_menu
+    a
+      color: #ffffff
+.bg_contacts_type_index
+  //#h_logo
+    @include hW(80px,196px)
+  #h_menu
+    a
+      color: #ffffff
