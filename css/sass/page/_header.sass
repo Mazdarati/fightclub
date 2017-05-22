@@ -8,6 +8,7 @@
       float: inherit
   #header_top
     @include hW(121px,inherit)
+    position: relative
     z-index: 20
     #h_menu
       float: right
@@ -41,7 +42,7 @@
     @include hW(310px,auto)
     z-index: -1
     #h_r_title
-      @include hW(auto, 360px)
+      @include hW(auto, 390px)
       @include pAllBy2(75px,0)
       h1
         font-size: 50px
@@ -57,7 +58,15 @@
       position: absolute
       bottom: 0
       z-index: 0
-      right: -100px
+      right: 20px
+      &.child
+        right: 20px
+      &.crossfit
+        right: -200px
+      &.fit
+        right: -35px !important
+      img
+        @include mBottom(-5px)
   #h_content_index
     position: absolute
     @include hW(620px,100%)
@@ -79,7 +88,8 @@
           .h_r_title_slider
             @include mAuto()
             @include hW(auto,1000px)
-            @include pAllBy2(220px,0)
+            @include pAllBy2(345px,0)
+
             z-index: 3
             h1
               font-size: 40px
@@ -89,7 +99,7 @@
               z-index: 4
             > div
               color: #ffffff
-              font-size: 18px
+              font-size: 28px
               @include mTop(14px)
               word-wrap: break-word
               z-index: 5

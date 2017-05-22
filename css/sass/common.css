@@ -174,6 +174,7 @@ ul {
   #header #header_top {
     height: 121px;
     width: inherit;
+    position: relative;
     z-index: 20; }
     #header #header_top #h_menu {
       float: right;
@@ -209,7 +210,7 @@ ul {
     z-index: -1; }
     #header #h_content #h_r_title {
       height: auto;
-      width: 360px;
+      width: 390px;
       padding: 75px 0; }
       #header #h_content #h_r_title h1 {
         font-size: 50px;
@@ -225,7 +226,15 @@ ul {
       position: absolute;
       bottom: 0;
       z-index: 0;
-      right: -100px; }
+      right: 20px; }
+      #header #h_content #h_l_bg.child {
+        right: 20px; }
+      #header #h_content #h_l_bg.crossfit {
+        right: -200px; }
+      #header #h_content #h_l_bg.fit {
+        right: -35px !important; }
+      #header #h_content #h_l_bg img {
+        margin-bottom: -5px; }
   #header #h_content_index {
     position: absolute;
     height: 620px;
@@ -252,7 +261,7 @@ ul {
             margin: 0 auto;
             height: auto;
             width: 1000px;
-            padding: 220px 0;
+            padding: 345px 0;
             z-index: 3; }
             #header #h_content_index > nav > ul > li .h_r_title_slider h1 {
               font-size: 40px;
@@ -262,7 +271,7 @@ ul {
               z-index: 4; }
             #header #h_content_index > nav > ul > li .h_r_title_slider > div {
               color: #ffffff;
-              font-size: 18px;
+              font-size: 28px;
               margin-top: 14px;
               word-wrap: break-word;
               z-index: 5; }
@@ -685,14 +694,17 @@ ul {
             margin-top: 115px; }
 
 #row_benefict {
-  background: #0d0d0e;
+  background: #0c0c0c;
   height: 650px;
   width: auto;
   position: relative; }
   #row_benefict .row_benefict_img {
-    position: absolute;
-    top: 0;
-    left: 0; }
+    float: left;
+    height: inherit;
+    width: 500px; }
+    #row_benefict .row_benefict_img img {
+      float: right;
+      margin-right: 20px; }
   #row_benefict .row_bernefict_text {
     float: right;
     height: inherit;
@@ -827,7 +839,7 @@ ul {
         font-family: FuturaPTHeavy;
         margin: 45px 0; }
       #content .divided_row > .row .text_t1 {
-        font-size: 14px;
+        font-size: 16px;
         font-family: FuturaPTBook;
         display: block;
         text-align: justify; }

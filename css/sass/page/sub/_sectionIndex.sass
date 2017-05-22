@@ -193,13 +193,15 @@
               word-break: normal
               @include mTop(115px)
 #row_benefict
-  @include bgColorHex(#0d0d0e)
+  @include bgColorHex(#0c0c0c)
   @include hW(650px, auto)
   position: relative
   .row_benefict_img
-    position: absolute
-    top: 0
-    left: 0
+    float: left
+    @include hW(inherit,500px)
+    img
+      float: right
+      @include mRight(20px)
   .row_bernefict_text
     float: right
     @include hW(inherit,500px)
